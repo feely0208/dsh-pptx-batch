@@ -1,4 +1,4 @@
-# @deepwhale-cn/dsh-pptx-batch 的组合层
+# @deepwhale-cn/dsh-pptx-batch 的组合层：装上即注册 pptx-batch skill
 - insert:
     - id: pptx-batch
       name: '@deepwhale-cn/dsh-pptx-batch'

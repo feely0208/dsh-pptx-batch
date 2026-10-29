@@ -1,67 +1,19 @@
 {
   "name": "@deepwhale-cn/dsh-pptx-batch",
   "version": "0.1.0",
-  "description": "深鲸 PPT 批量：提取幻灯片文字、导出图片、统计页数，一次处理整目录",
+  "description": "PPT 批量填模板 / 替换文字与图片 / 导出内容清单（python-pptx）",
   "type": "module",
   "license": "MIT",
-  "keywords": [
-    "dsh",
-    "dsh-plugin",
-    "deepseek-harness",
-    "plugin",
-    "skill",
-    "pptx",
-    "ppt",
-    "powerpoint",
-    "幻灯片"
-  ],
-  "files": [
-    "lib",
-    "bin",
-    "skill",
-    "cordis.patch.yml",
-    "tests/fixtures",
-    "README.md",
-    "LICENSE"
-  ],
+  "keywords": ["dsh", "dsh-plugin", "deepseek-harness", "skill", "tool", "pptx-batch"],
+  "files": ["lib", "bin", "skill", "cordis.patch.yml", "tests/fixtures", "README.md", "LICENSE"],
   "main": "./lib/index.js",
-  "exports": {
-    ".": "./lib/index.js",
-    "./client": "./lib/client.js",
-    "./package.json": "./package.json"
-  },
-  "bin": {
-    "dsh-pptx-batch": "./bin/cli.mjs"
-  },
-  "engines": {
-    "dsh": ">=0.1.0-rc.6 <0.3.0",
-    "node": ">=18"
-  },
-  "dsh": {
-    "bundle": {
-      "patch": "./cordis.patch.yml"
-    },
-    "client": {
-      "inject": [
-        "@deepseek-ai/dsh-client-runtime"
-      ],
-      "platform": "web",
-      "immediately": true
-    }
-  },
-  "dependencies": {
-    "@deepwhale-cn/dsh-guard-core": "^0.10.1"
-  },
-  "peerDependencies": {
-    "@deepseek-ai/dsh-skill": "*"
-  },
-  "author": "温州深鲸智能科技有限公司 <contact@deepwhale.org.cn>",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/feely0208/dsh-pptx-batch.git"
-  },
+  "exports": { ".": "./lib/index.js", "./package.json": "./package.json" },
+  "bin": { "dsh-pptx-batch": "./bin/cli.mjs" },
+  "engines": { "dsh": ">=0.1.0-rc.6 <0.3.0", "node": ">=18" },
+  "dsh": { "bundle": { "patch": "./cordis.patch.yml" } },
+  "dependencies": { "@deepwhale-cn/dsh-guard-core": "^0.5.1" },
+  "peerDependencies": { "@deepseek-ai/dsh-skill": "*" },
+  "repository": { "type": "git", "url": "git+https://github.com/feely0208/dsh-pptx-batch.git" },
   "homepage": "https://www.deepwhale.org.cn/skills.html",
-  "bugs": {
-    "url": "https://github.com/feely0208/dsh-pptx-batch/issues"
-  }
+  "bugs": { "url": "https://github.com/feely0208/dsh-pptx-batch/issues" }
 }
